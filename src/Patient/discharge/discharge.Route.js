@@ -1,6 +1,6 @@
 var express     = require('express');
 var router      = express.Router();
-var Controller  = require('./Patient.Controller');
+var Controller  = require('./discharge.Controller');
 
 router.post('/', (req, res) => {
     Controller.insert(req.body).then(data => {
