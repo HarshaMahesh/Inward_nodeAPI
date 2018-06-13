@@ -122,7 +122,6 @@ const PatientdischargeSchema = new Schema({
     }
 );
 
-<<<<<<< HEAD
 //Add new schema here
 //Bed Schema...
 const BedSchema = new Schema({
@@ -195,13 +194,13 @@ mongoose.model('WardBed', WardBedSchema);
 mongoose.model('Equipment', EquipmentSchema);
 mongoose.model('Drug', DrugSchema);
 //
-=======
+
 
 mongoose.model('Patient', PatientSchema);
 mongoose.model('eTransfer',eTransferSchema);
 mongoose.model('iTransfer',iTransferSchema);
 mongoose.model('discharge',PatientdischargeSchema);
->>>>>>> patient
+
 
 mongoose.connect('mongodb://localhost:27017/Hospital_ward', (err) => {
     if (err) {
