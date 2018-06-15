@@ -139,6 +139,15 @@ const BedSchema = new Schema({
         require: false
     }
 });
+
+//BedType Schema...
+const BedTypeSchema = new Schema({
+    typeName: {
+        type: String,
+        require: true
+    }
+});
+
 //Ward Beds Schema...
 const WardBedSchema = new Schema({
     bedNumber: {
@@ -174,10 +183,25 @@ const EquipmentSchema = new Schema({
         require: true
     }
 });
+//EquipmentType Schema...
+const EquipmentTypeSchema = new Schema({
+    equipType: {
+        type: String,
+        require: true
+    }
+});
 //Drug Schema...
 const DrugSchema = new Schema({
     drugName: {
         type: String,
+        require: true
+    },
+    drugCount: {
+        type: String,
+        require: true
+    },
+    addedDate: {
+        type: Date,
         require: true
     },
     quantity: {
@@ -188,10 +212,12 @@ const DrugSchema = new Schema({
 
 
 
-mongoose.model('Patient', PatientSchema);
+
 mongoose.model('Bed', BedSchema);
+mongoose.model('BedType', BedTypeSchema);
 mongoose.model('WardBed', WardBedSchema);
 mongoose.model('Equipment', EquipmentSchema);
+mongoose.model('EquipmentType', EquipmentTypeSchema);
 mongoose.model('Drug', DrugSchema);
 //
 
